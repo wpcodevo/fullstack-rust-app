@@ -1,0 +1,4 @@
+[[hooks]]
+stage = "post_build"
+command = "sh"
+command_arguments = ["-c", "npx tailwindcss -i ./styles/tailwind.css -o ./dist/.stage/index.css"]
