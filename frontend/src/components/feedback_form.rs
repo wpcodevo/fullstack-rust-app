@@ -1,6 +1,6 @@
 use super::rating::Rating;
 use crate::{
-    api::feedback_api::api_create_feedback,
+    api::api_create_feedback,
     store::{set_feedback, set_loading, set_show_alert, Store},
 };
 

@@ -3,7 +3,7 @@ use yewdux::prelude::*;
 
 use super::feedback_item::FeedbackItem;
 use crate::{
-    api::feedback_api::api_fetch_feedbacks,
+    api::api_fetch_feedbacks,
     store::{set_feedback_list, set_loading, set_show_alert, Store},
 };
 

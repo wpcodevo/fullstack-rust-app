@@ -3,7 +3,7 @@ use yew::prelude::*;
 use yewdux::prelude::*;
 
 use crate::{
-    api::feedback_api::api_delete_feedback,
+    api::api_delete_feedback,
     store::{delete_feedback, set_loading, set_show_alert, Store},
 };
 use common::Feedback;

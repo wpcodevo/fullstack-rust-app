@@ -1,5 +1,4 @@
-use super::types::{ErrorResponse, FeedbackListResponse, FeedbackResponse};
-use common::Feedback;
+use common::{ErrorResponse, Feedback, FeedbackListResponse, FeedbackResponse};
 use reqwasm::http;
 
 pub async fn api_create_feedback(feedback_data: &str) -> Result<Feedback, String> {
