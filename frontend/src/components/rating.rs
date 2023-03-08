@@ -29,8 +29,8 @@ pub fn Rating(props: &Props) -> Html {
                 let id = format!("num{}", i);
 
                 html! {
-                    <li class={format!("relative bg-gray-200 w-14 h-14 p-3 text-center rounded-full border-gray-300 border-2 transition duration-300 {}",
-                        if selected == i { "bg-pink-500 text-white" } else { "" },
+                    <li class={format!("relative w-14 h-14 p-3 text-center rounded-full border-gray-300 border-2 transition duration-300 {}",
+                        if selected == i { "bg-pink-500 text-white" } else { "bg-gray-200" },
                     )}>
                         <input type="radio" class="opacity-0" id={id.clone()} name="rating" value={Some(i.to_string())} checked={selected == i} onchange={on_input_change.clone()} />
                         <label for={id} class="absolute w-full h-full flex items-center justify-center rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:bg-pink-500 hover:text-white transition duration-300">{ label }</label>
