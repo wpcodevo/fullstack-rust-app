@@ -12,7 +12,8 @@ pub fn FeedbackList() -> Html {
     let (store, dispatch) = use_store::<Store>();
     let feedback_list = store.feedbacks.clone();
 
-    use_effect_with_deps(
+    use_effect_with(
+    (),
         move |_| {
             let dispatch = dispatch.clone();
             wasm_bindgen_futures::spawn_local(async move {
@@ -30,7 +31,6 @@ pub fn FeedbackList() -> Html {
                 }
             });
         },
-        (),
     );
 
     html! {
